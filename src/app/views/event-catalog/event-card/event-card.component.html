@@ -1,0 +1,23 @@
+<div class="event-card">
+  <div class="header">{{event.title}}</div>
+  <div class="content">
+    <div class="flyer-front-wrapper">
+      <img class="flyer-front" [src]="event.flyerFront" [alt]="event.title"/>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="event-venue" (click)="openLink(event.venue.direction)">
+      <span class="material-symbols-outlined pin-icon">pin_drop</span>
+      {{event.venue.name}}
+    </div>
+    <div>| Starts {{event.startTime | date: 'dd.MM.yyyy, HH:mm:ss'}}</div>
+    <div>| Ends {{event.endTime | date: 'dd.MM.yyyy, HH:mm:ss'}}</div>
+    <div class="bottom" (click)="addEvent.emit()">
+      <button class="primary-button add-button">
+        <span class="material-symbols-outlined">
+          add
+        </span>
+      </button>
+    </div>
+  </div>
+</div>

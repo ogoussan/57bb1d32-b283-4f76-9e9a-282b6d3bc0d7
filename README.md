@@ -1,35 +1,27 @@
-# Events App
+# EventsApp
 
-![image](https://user-images.githubusercontent.com/75047088/177106598-0c8e2b60-9cfa-4230-931f-43f2a242f603.png)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
 
-## Features
-- Angular
-- rxjs
-- SCSS
+## Development server
 
-## Setup
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-### Prerequisites:
+## Code scaffolding
 
-- npm
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Clone the Project
+## Build
 
-```sh
-$ git clone https://github.com/ogoussan/57bb1d32-b283-4f76-9e9a-282b6d3bc0d7
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-### Install dependencies
+## Running unit tests
 
-```sh 
-$ cd ./events-app
-$ npm install
-```
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Run app in development mode
+## Running end-to-end tests
 
-```sg
-$ npm start
-```
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

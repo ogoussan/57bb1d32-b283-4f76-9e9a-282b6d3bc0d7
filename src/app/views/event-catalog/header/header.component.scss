@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: var(--secondary);
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    height: inherit;
+
+    .filter-icon {
+      color: var(--primary);
+      cursor: pointer;
+    }
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    margin: 0 24px;
+    color: var(--primary);
+  }
+}
+
+.shopping-cart-icon {
+  cursor: pointer;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -8px;
+  left: -8px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+
+  &.hidden {
+    visibility: hidden;
+  }
+}

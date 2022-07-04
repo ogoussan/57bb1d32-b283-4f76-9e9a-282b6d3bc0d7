@@ -1,0 +1,20 @@
+.event-date-group {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 22px;
+
+  .date {
+    color: var(--secondary);
+    font-weight: bold;
+  }
+
+  .event-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .event-card {
+      flex-basis: calc(100%/3 - 16px);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.shopping-cart-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 250px;
+  height: 364px;
+  padding: 16px;
+  background-color: var(--primary);
+  box-shadow: 0 0 6px 1px #0000003d;
+  overflow-y: auto;
+
+  .title {
+    color: black;
+  }
+
+  .shopping-cart-item {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+
+    .event-title {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .remove-button {
+      cursor: pointer;
+      color: red;
+    }
+  }
+
+
+}

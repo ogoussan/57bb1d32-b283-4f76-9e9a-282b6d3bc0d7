@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="left-section">
+    <app-search-bar
+      (searchTerm)="searchTerm.emit($event)"
+    ></app-search-bar>
+    <app-overlay
+      #filterMenuOverlay
+      [triggerTemplate]="filterIcon"
+      [contentTemplate]="filterMenu"
+      [top]="'8px'"
+    >
+    </app-overlay>
+  </div>
+  <div class="right-section">
+    <app-overlay
+      [triggerTemplate]="shoppingCartIcon"
+      [contentTemplate]="shoppingCartOverview"
+      [top]="'8px'"
+      [left]="'-250px'"
+    >
+    </app-overlay>
+  </div>
+</div>
+
+<ng-template #filterIcon>
+   <span class="material-symbols-outlined filter-icon">
+      filter_alt
+   </span>
+</ng-template>
+
+<ng-template #filterMenu>
+  <app-filter-menu
+    (onFilterUpdate)="closeFilterMenu()"
+  ></app-filter-menu>
+</ng-template>
+
+
+<ng-template #shoppingCartIcon>
+   <span class="material-symbols-outlined shopping-cart-icon">
+      shopping_cart
+    </span>
+  <div [class.hidden]="!shoppingCartEvents?.length" class="indicator">
+    {{shoppingCartEvents.length}}
+  </div>
+</ng-template>
+
+
+<ng-template #shoppingCartOverview>
+  <app-shopping-cart-overview
+    [events]="shoppingCartEvents"
+    (removeEvent)="removeEvent.emit($event)"
+  ></app-shopping-cart-overview>
+</ng-template>

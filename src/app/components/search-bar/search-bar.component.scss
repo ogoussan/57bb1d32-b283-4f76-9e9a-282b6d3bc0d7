@@ -1,0 +1,30 @@
+.search-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 228px;
+  height: 38px;
+  margin: 0 24px;
+  background-color: #3b8ad9;
+  border-radius: 4px;
+
+  .search-icon {
+    color: var(--primary);
+  }
+
+  .search-input {
+    outline: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+  }
+}
+
+::placeholder {
+  color: var(--primary);
+}
+
+::-ms-input-placeholder {
+  color: var(--primary);
+}

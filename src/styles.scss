@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+.html, body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+
+  --primary: #ffffff;
+  --primary-variant: rgba(255, 255, 255, 0.8);
+  --secondary: #1976d3;
+}
+
+.primary-button {
+  color: var(--primary);
+  background-color: var(--secondary);
+  border-radius: 4px;
+  padding: 1rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondary-button {
+  background-color: var(--primary);
+  border-radius: 4px;
+  padding: 1rem;
+  border: 1px solid;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}

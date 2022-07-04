@@ -1,0 +1,54 @@
+<div #eventCatalogElement (scroll)="onScroll()" class="event-catalog">
+  <div class="header-wrapper">
+    <app-header
+      [shoppingCartEvents]="shoppingCartEvents"
+      (removeEvent)="removeEventFromShoppingCart($event)"
+      (searchTerm)="updateSearchTerm($event)"
+    ></app-header>
+  </div>
+  <div *ngIf="dateOffset?.date" class="event-date-area">
+    <div class="date">
+      {{dateOffset.date |date: 'EEE MMM dd yyyy'}}
+    </div>
+  </div>
+  <div class="content">
+    <div class="top">
+      <div class="filter-tags">
+        <app-tag
+          [tagContent]="locationTagContent"
+          [containsFlag]="true"
+        ></app-tag>
+        <app-tag
+          [tagContent]="timeSpanTagContent"
+        ></app-tag>
+      </div>
+      <div class="event-title">Public Events</div>
+    </div>
+
+    <div *ngIf="events" class="event-date-group-container">
+      <ng-container *ngFor="let eventDateGroup of getMatchingEventDateGroups() trackBy: trackEventDateGroup">
+        <app-event-date-group
+          [eventDateGroup]="eventDateGroup"
+          [scrollTop]="this.scrollTop"
+          (offsetTop)="addDateOffset(eventDateGroup.date, $event)"
+          (addEvent)="addEventToShoppingCart($event)"
+        ></app-event-date-group>
+      </ng-container>
+    </div>
+  </div>
+
+  <ng-template #locationTagContent>
+    <img
+      class="tag-location-img"
+      [src]="'assets/images/' + eventFilter.location.country + '.png'"
+      [alt]="eventFilter.location.country"
+    />
+    <b>{{eventFilter.location.city.toUpperCase()}}</b>
+  </ng-template>
+
+  <ng-template #timeSpanTagContent>
+    <div class="time-range-tag-text">
+      {{eventFilter.startTime| date: 'dd.MM.yyyy'}} - {{eventFilter.endTime| date: 'dd.MM.yyyy'}}
+    </div>
+  </ng-template>
+</div>

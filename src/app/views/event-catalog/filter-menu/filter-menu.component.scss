@@ -1,0 +1,63 @@
+.filter-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 250px;
+  height: 364px;
+  padding: 16px;
+  background-color: var(--primary);
+  box-shadow: 0 0 6px 1px #0000003d;
+  overflow-y: auto;
+
+  .event-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .time-range-select {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .input-field {
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+    }
+  }
+
+  .location-select {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .location-options {
+      display: flex;
+      gap: 8px;
+      .location-option-wrapper {
+        cursor: pointer;
+        padding: 4px;
+        &.active {
+          border: 2px solid var(--secondary);
+        }
+
+        .location-img {
+          width: 32px;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  .filter-category-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

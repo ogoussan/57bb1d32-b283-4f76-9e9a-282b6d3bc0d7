@@ -1,0 +1,6 @@
+<div class="search-bar-wrapper">
+  <span class="material-symbols-outlined search-icon">
+    search
+  </span>
+  <input class="search-input" type="text" placeholder="Search..." (input)="searchTerm.emit(getValue($event))"/>
+</div>

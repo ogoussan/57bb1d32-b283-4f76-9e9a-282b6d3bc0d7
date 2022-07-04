@@ -1,0 +1,12 @@
+<div #eventDateGroupElement class="event-date-group">
+    <div class="date">{{eventDateGroup.date |date: 'EEE MMM dd yyyy'}}</div>
+    <div class="event-container">
+      <ng-container *ngFor="let event of eventDateGroup.events trackBy: trackEvent">
+        <app-event-card
+          class="event-card"
+          [event]="event"
+          (addEvent)="addEvent.emit(event)"
+        ></app-event-card>
+      </ng-container>
+    </div>
+</div>

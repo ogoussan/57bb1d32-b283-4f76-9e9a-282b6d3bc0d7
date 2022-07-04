@@ -1,0 +1,17 @@
+.overlay-trigger {
+  display: flex;
+}
+
+.overlay-content-wrapper {
+  position: relative;
+  width: 0;
+  height: 0;
+
+  &.hidden {
+    display: none;
+  }
+
+  .overlay-content {
+    position: absolute;
+  }
+}

@@ -1,0 +1,72 @@
+.event-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 650px;
+  box-shadow: 1px 1px 6px 1px #0000003d;
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    height: 80px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    overflow: hidden;
+    background-color: #999999;
+
+    .flyer-front-wrapper {
+      display: flex;
+      align-items: center;
+      width: 400px;
+
+      .flyer-front {
+        width: auto;
+        height: auto;
+        min-width: 400px;
+        min-height: 400px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    height: 80px;
+
+    .event-venue {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+      }
+
+      .pin-icon {
+        color: var(--secondary);
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: flex-end;
+
+      .add-button {
+        display: flex;
+        justify-content: center;
+        margin: 0 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

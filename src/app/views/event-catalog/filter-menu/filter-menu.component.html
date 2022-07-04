@@ -1,0 +1,36 @@
+<div class="filter-menu">
+  <div class="event-title">Filter by</div>
+  <div class="time-range-select">
+    <div class="filter-category-title">Date range</div>
+    <div class="start-date-field input-field">
+      <label><b>start date:</b></label>
+      <input [(ngModel)]="startDateString" type="date"/>
+    </div>
+    <div class="end-date-field input-field">
+      <label><b>end date:</b></label>
+      <input [(ngModel)]="endDateString" type="date"/>
+    </div>
+  </div>
+  <div class="location-select">
+    <div class="filter-category-title">Location</div>
+    <div class="location-options">
+      <ng-container *ngFor="let locationOption of locationOptions">
+        <div
+          class="location-option-wrapper"
+          [class.active]="locationOption.id === currentMenuFilter.location?.id"
+          (click)="selectEventLocation(locationOption)"
+        >
+          <img
+            height="32px"
+            class="location-img"
+            [src]="'assets/images/' + locationOption.country + '.png'"
+            [alt]="locationOption.city" />
+          <b>{{locationOption.city.toUpperCase()}}</b>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="bottom">
+    <button (click)="updateEventFilter()" class="primary-button">apply filter</button>
+  </div>
+</div>

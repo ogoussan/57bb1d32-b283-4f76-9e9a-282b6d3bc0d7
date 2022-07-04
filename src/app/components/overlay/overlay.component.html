@@ -1,0 +1,8 @@
+<div #overlayTrigger class="overlay-trigger" (click)="openOverlay()">
+  <ng-container *ngTemplateOutlet="triggerTemplate"></ng-container>
+</div>
+<div [class.hidden]="!isOverlayContentVisible" class="overlay-content-wrapper">
+  <div #overlayContent class="overlay-content">
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+  </div>
+</div>
